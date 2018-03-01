@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	compile("org.springframework:spring-context:${springVersion}")
+	compile("org.springframework:spring-aop:${springVersion}")
+	compile("org.springframework:spring-web:${springVersion}")
+    compile("org.aspectj:aspectjweaver:${aspectJVersion}")
+    compile("org.springframework:spring-jdbc:${springVersion}")
+    compile("com.h2database:h2:${h2Version}")
+    compileOnly('org.projectlombok:lombok:1.16.8')
+
+
+    testCompile("junit:junit:${junitVersion}")
+    testCompile("org.mockito:mockito-core:${mockitoVersion}")
+    testCompile("org.springframework:spring-test:${springVersion}")
+}
+
